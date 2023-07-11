@@ -17,16 +17,6 @@ public class GameManager : MonoBehaviour
     private int score;
     private float spawnRate = 1.0f;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
-
     IEnumerator SpawnTarget()
     {
         while (isGameActive)
@@ -35,7 +25,6 @@ public class GameManager : MonoBehaviour
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
         }
-
     }
     
     public void UpdateScore(int scoreToAdd)
@@ -44,7 +33,6 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score : " + score;
     }
     
-
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
